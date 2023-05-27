@@ -8,5 +8,5 @@ spec:
     app: jellyfin
   ports:
     - protocol: TCP
-      port: 8096
-      targetPort: 8096
+      port: 3000
+      targetPort: 3000
