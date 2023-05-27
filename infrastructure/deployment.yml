@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: owasp-shop
+  namespace: develop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+     workload.user.cattle.io/workloadselector: apps.deployment-owasp-shop
+  template:
+    metadata:
+      labels:
+        workload.user.cattle.io/workloadselector: apps.deployment-owasp-shop
+    spec:
+      containers:
+      - image: bkimminich/juice-shop:latest
+        name: owasp-shop

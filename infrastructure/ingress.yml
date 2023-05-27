@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: owasp-shop
+  namespace: develop
+spec:
+  rules:
+    - host: dev-gc.ddns.net
+      http:
+        paths:
+          - path: /owasp-shop
+            pathType: Prefix
+            backend:
+              service:
+                name: owasp-shop-service
+                port:
+                  number: 3000
+  tls:
+  - hosts:
+    - owasp-shop
+    secretName: ssl-cert-develop
+  ingressClassName: traefik

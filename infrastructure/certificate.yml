@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ssl-cert-develop
+  namespace: develop
+spec:
+  secretName: ssl-cert-develop
+  issuerRef:
+    name: letsencrypt-develop
+    kind: ClusterIssuer
+  commonName: dev-gc.ddns.net
+  dnsNames:
+  - dev-gc.ddns.net
