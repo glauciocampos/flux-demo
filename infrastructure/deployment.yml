@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: owasp-shop
-          image: bkimminich/juice-shop:latest
+          image: bkimminich/juice-shop:v8.7.2
           ports:
             - containerPort: 3000
