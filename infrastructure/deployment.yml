@@ -1,4 +1,3 @@
-apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
@@ -15,6 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:stable-alpine
+          image: lscr.io/linuxserver/nginx:latest
           ports:
             - containerPort: 80
+              hostPort: 8080
