@@ -8,6 +8,6 @@ spec:
   issuerRef:
     name: letsencrypt-develop
     kind: ClusterIssuer
-  commonName: dev-gc.ddns.net
+  commonName: develop-gc.ddns.net
   dnsNames:
-  - dev-gc.ddns.net
+  - develop-gc.ddns.net

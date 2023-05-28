@@ -5,7 +5,7 @@ metadata:
   namespace: develop
 spec:
   rules:
-    - host: dev-gc.ddns.net
+    - host: develop-gc.ddns.net
       http:
         paths:
           - path: /owasp-shop
