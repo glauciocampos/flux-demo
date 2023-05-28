@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: nginx
   namespace: develop
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
 spec:
   rules:
     - host: develop-gc.ddns.net
